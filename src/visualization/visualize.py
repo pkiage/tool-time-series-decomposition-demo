@@ -48,19 +48,19 @@ def time_series_line_plot(data):
     fig = px.line(
         data
     )
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def time_series_scatter_plot(data):
     fig = px.scatter(
         data
     )
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def time_series_box_plot(data):
     fig = px.box(data, points="all")
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def time_series_line_and_box(data):
