@@ -20,29 +20,61 @@ def main():
 
     show_inputted_dataframe(data)
 
-    time_series_line_and_box(data)
+    with st.expander("Box plot"):
+        time_series_box_plot(data)
 
     st.header("Time series decomposition")
 
-    decomposition = decompose_time_series(data)
+    [decomposition, selected_model_type] = decompose_time_series(data)
+
+    model_types = ['Additive', 'Multiplicative']
+
+    if selected_model_type == model_types[0]:
+        st.subheader('Additive Model')
+        st.latex(r'''
+        Y[t] = T[t]+S[t]+e[t]
+        ''')
+
+    if selected_model_type == model_types[1]:
+        st.subheader('Multiplicative Model')
+        st.latex(r'''
+        Y[t] = T[t] \times S[t] \times e[t]
+        ''')
 
     standard_decomposition_plot(decomposition)
 
     [trend, seasonal, residual] = extract_trend_seasonal_resid(decomposition)
 
-    with st.expander("Trend Plot"):
+    with st.expander("Time series Line Plot (Y[t])"):
+        time_series_line_plot(data)
+
+    st.latex(r'''=''')
+
+    with st.expander("Trend Plot (T[t])"):
         st.write('The trend component of the data series.')
         st.write('Trend: secular variation(long-term, non-periodic variation)')
 
         time_series_line_plot(trend)
 
-    with st.expander("Seasonality Plot"):
+    if selected_model_type == model_types[0]:
+        st.latex(r'''+''')
+
+    if selected_model_type == model_types[1]:
+        st.latex(r'''\times''')
+
+    with st.expander("Seasonality Plot (S[t])"):
         st.write('The seasonal component of the data series.')
         st.write(
             'Seasonality: Periodic fluctuations (often at short-term intervals less than a year).')
         time_series_line_plot(seasonal)
 
-    with st.expander("Residual Plot"):
+    if selected_model_type == model_types[0]:
+        st.latex(r'''+''')
+
+    if selected_model_type == model_types[1]:
+        st.latex(r'''\times''')
+
+    with st.expander("Residual Plot (e[t])"):
         st.write('The residual component of the data series.')
         st.write('Residual: What remains after the other components have been removed (describes random, irregular influences).')
         st.write(f'Residual mean: {residual.mean():.4f}')
