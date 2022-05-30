@@ -63,15 +63,6 @@ def time_series_box_plot(data):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def time_series_line_and_box(data):
-
-    with st.expander("Line plot"):
-        time_series_line_plot(data)
-
-    with st.expander("Box plot"):
-        time_series_box_plot(data)
-
-
 def streamlit_chart_setting_height_width(
     title: str,
     default_widthvalue: int,
