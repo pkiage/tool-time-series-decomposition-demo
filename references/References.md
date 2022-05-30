@@ -1,4 +1,5 @@
 # References
+## Theory & Practice
 [Decomposition of Time Series](https://en.wikipedia.org/wiki/Decomposition_of_time_series)
 
 [Forecasting Principles and Practice - Residuals](https://otexts.com/fpp2/residuals.html)
@@ -13,3 +14,7 @@
 
 [statsmodels.tsa.seasonal.DecomposeResult](https://www.statsmodels.org/dev/generated/statsmodels.tsa.seasonal.DecomposeResult.html#statsmodels.tsa.seasonal.DecomposeResult)
 
+[Time Series with Python](https://www.datacamp.com/tracks/time-series-with-python)
+
+## Data
+[Time Series with Python](https://www.datacamp.com/tracks/time-series-with-python)
