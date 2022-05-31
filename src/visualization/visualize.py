@@ -52,9 +52,7 @@ def time_series_line_plot(data):
 
 
 def time_series_scatter_plot(data):
-    fig = px.scatter(
-        data
-    )
+    fig = px.scatter(data, trendline="ols")
     st.plotly_chart(fig, use_container_width=True)
 
 
