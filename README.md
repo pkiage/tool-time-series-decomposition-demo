@@ -22,7 +22,7 @@ git clone https://github.com/pkiage/tool-time-series-decomposition-demo
 or
 
 ```shell
-gh repo clone pkiage/tool-credit-risk-modelling
+gh repo clone pkiage/tool-time-series-autocorrelation-demo
 ```
 
 #### Just to deploy locally
