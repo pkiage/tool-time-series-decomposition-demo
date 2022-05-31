@@ -4,8 +4,6 @@ from data.utils import *
 from visualization.visualize import *
 from features.build_features import *
 
-import os
-
 
 def main():
 
@@ -26,8 +24,6 @@ def main():
     st.header("Time series decomposition")
 
     [decomposition, selected_model_type] = decompose_time_series(data)
-
-    model_types = ['Additive', 'Multiplicative']
 
     if selected_model_type == model_types[0]:
         st.subheader('Additive Model')

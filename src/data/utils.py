@@ -4,11 +4,6 @@ data_set_options = [
     'Milk production'
 ]
 
-sample_or_upload_options = [
-    'Use sample data',
-    'Upload data'
-]
-
 
 def import_sample_data(sample_data_selected, data_set_options):
     if sample_data_selected == data_set_options[0]:
