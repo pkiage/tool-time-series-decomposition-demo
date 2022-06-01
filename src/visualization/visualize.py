@@ -27,7 +27,7 @@ def streamlit_2columns_metrics_df_shape(df: pd.DataFrame):
 
 
 def show_inputted_dataframe(data):
-    with st.expander("Input Dataframe (X and y)"):
+    with st.expander("Input Dataframe:"):
         st.dataframe(data)
         streamlit_2columns_metrics_df_shape(data)
 
@@ -37,7 +37,7 @@ def standard_decomposition_plot(decomposition):
     fig = decomposition.plot()
 
     (xsize_standard_decomp, ysize_standard_decomp) = streamlit_chart_setting_height_width(
-        "Chart Settings", 5, 5, "xsize_standard_decomp", "ysize_standard_decomp")
+        "Chart Size:", 5, 5, "xsize_standard_decomp", "ysize_standard_decomp")
 
     fig.set_size_inches(xsize_standard_decomp, ysize_standard_decomp)
 
@@ -57,7 +57,13 @@ def time_series_scatter_plot(data):
 
 
 def time_series_box_plot(data):
-    fig = px.box(data, points="all")
+    fig = px.box(data, hover_data=['Date'], points="all")
+    st.plotly_chart(fig, use_container_width=True)
+
+
+def time_series_violin_and_box_plot(graph_data):
+    fig = px.histogram(graph_data,
+                       marginal="violin")
     st.plotly_chart(fig, use_container_width=True)
 
 

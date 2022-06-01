@@ -14,12 +14,16 @@ def main():
     sample_data_selected = st.selectbox(
         'Select sample data:', data_set_options)
 
-    data = import_sample_data(sample_data_selected, data_set_options)
+    data, graph_data = import_sample_data(
+        sample_data_selected, data_set_options)
 
     show_inputted_dataframe(data)
 
-    with st.expander("Box plot"):
-        time_series_box_plot(data)
+    with st.expander("Box Plot:"):
+        time_series_box_plot(graph_data)
+
+    with st.expander("Dist Plot (histogram and violin plot):"):
+        time_series_violin_and_box_plot(data)
 
     st.header("Time series decomposition")
 

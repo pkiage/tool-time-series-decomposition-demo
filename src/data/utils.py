@@ -14,4 +14,6 @@ def import_sample_data(sample_data_selected, data_set_options):
         data = pd.read_csv('data/processed/milk_production.csv',
                            parse_dates=['date'], index_col='date')
 
-    return data
+    graph_data = data.reset_index()
+    graph_data.columns.values[0] = 'Date'
+    return data, graph_data
