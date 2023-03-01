@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-from data.utils import *
-from visualization.visualize import *
-from features.build_features import *
+from src.data.utils import *
+from src.visualization.visualize import *
+from src.features.build_features import *
 
 
 def main():
