@@ -1,3 +1,15 @@
+---
+title: Tool Time Series Decomposition
+emoji: 📈
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.17.0
+app_file: src/app.py
+pinned: false
+license: openrail
+---
+
 # Time series decomposition tool
 
 Tool demonstrating time series decomposition in Python.
