@@ -1,5 +1,5 @@
 ---
-title: Time Series Decomposition
+title: Time Series Decomposition Demo
 emoji: 📈
 colorFrom: indigo
 colorTo: blue
