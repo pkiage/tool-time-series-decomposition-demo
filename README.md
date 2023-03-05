@@ -1,7 +1,7 @@
 ---
 title: Time Series Decomposition Demo
 emoji: 📈
-colorFrom: indigo
+colorFrom: green
 colorTo: blue
 sdk: streamlit
 sdk_version: 1.17.0
