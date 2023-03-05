@@ -91,7 +91,7 @@ Initial Setup
 - [When creating the Spaces Configuration Reference](https://huggingface.co/docs/hub/spaces-config-reference) ensure the [Streamlit Space](https://huggingface.co/docs/hub/spaces-sdks-streamlit) version (sdk_version) specified is supported by HF
 
 ```shell
-git remote add space https://huggingface.co/spaces/pkiage/time_series_autocorrelation_demo
+git remote add space https://huggingface.co/spaces/pkiage/time_series_decomposition_demo
 
 git push --force space main
 ```
