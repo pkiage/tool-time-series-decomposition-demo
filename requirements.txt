@@ -3,3 +3,4 @@ pandas
 statsmodels
 plotly
 matplotlib
+altair<5
