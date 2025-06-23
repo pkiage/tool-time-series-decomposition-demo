@@ -100,6 +100,6 @@ git push --force space main
 
 ## Demo Links
 - Hugging Face Space: https://huggingface.co/spaces/pkiage/time_series_decomposition_demo
-- Streamlit Community Cloud: https://pkiage-tool-time-series-autocorrelation-demo-app-l0umps.streamlit.app/
+- Streamlit Community Cloud: https://pkiage-tool-time-series-decomposition-demo-app-086eb6.streamlit.app/
 
 
